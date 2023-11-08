@@ -1,6 +1,8 @@
 
 const Server = require("./controllers/server.js");
-const server = new Server(3000);
+const PORT = process.env.PORT;
+const server = new Server(PORT);
+
 
 server.listen();
 

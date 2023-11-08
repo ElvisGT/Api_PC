@@ -1,11 +1,9 @@
-
 const {Router} = require("express");
+const { getComputers } = require("../controllers/computer");
 const router = Router();
 
 
-router.get("/",(req,res) => {
-    res.send("Exacto");
-})
+router.get("/",getComputers)
 
 
 module.exports = router;

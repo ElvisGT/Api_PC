@@ -1,16 +1,12 @@
 
-class Computer {
-    constructor(){
-        this.computers = [];
-    }
+
+const getComputers = (req,res) => {
+    res.json({
+        msg:"OK OK"
+    })
+}   
 
 
-    get_computers(){
-        app.get("/computers",(req,res) => {
-            this.computers = [1,3,5]
-            res.send("Aqui")
-         })
-    }
+module.exports = {
+    getComputers
 }
-
-module.exports = Computer;
