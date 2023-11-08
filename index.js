@@ -1,10 +1,8 @@
-const express = require("express");
-const app = express();
 
-app.listen(3000,() => {
-    console.log(`El servidor esta corriendo en el puerto ${3000}`);
-})
+const Server = require("./controllers/server.js");
+const server = new Server(3000);
 
-app.get("/",(req,res) => {
-    res.send("Ha entrado");
-})
+server.listen();
+
+
+
