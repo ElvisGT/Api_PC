@@ -4,13 +4,14 @@ const { getComputers,
         getComputerByID, 
         updateComputer, 
         deleteComputer} = require("../controllers/computers");
+const { isComputerExists } = require("../helpers/isComputerExists");
 const router = Router();
 
 
 router.get("/",getComputers);
-router.post("/",createComputer);
+router.post("/",isComputerExists,createComputer);
 router.get("/:id",getComputerByID);
-router.put("/:id",updateComputer);
+router.put("/:id",isComputerExists,updateComputer);
 router.delete("/:id",deleteComputer);
 
 
