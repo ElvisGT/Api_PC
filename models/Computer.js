@@ -11,7 +11,10 @@ const computerSchema = new Schema({
     micro:{
         type:String,
     },
-
+    stock:{
+        type:Number,
+        default:0
+    }
 
 });
 
