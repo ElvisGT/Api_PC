@@ -18,6 +18,12 @@ const computerSchema = new Schema({
 
 });
 
+computerSchema.methods.toJSON =  function() {
+    const {__v,...rest} = this.toObject();
+
+    return rest;
+}
+
 const Computer = model("Computer",computerSchema);
 
 module.exports = Computer;
